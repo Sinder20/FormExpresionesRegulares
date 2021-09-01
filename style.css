@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(124,185,232);
+}
+.container {
+    margin: auto;
+    padding: 5px;
+    text-align: left;
+    width: 450px;
+    height: 400px;
+}
+
+form {
+    width: 450px; height: 400px;
+    background-color: rgb(221,243,255);
+    border: 2px solid black;
+    border-radius: 1em;
+}
+
+input{
+    width: 230px;
+    background-color: rgb(254,255,153);
+}
+
+h4{
+    color: rgb(3,34,141);
+}
+
+#btnSuscribirse{
+    background-color: rgb(20,73,211);
+    color: white;
+    border: solid;
+    margin: 1px;
+    padding: 4px;
+    width: 110px;
+}
