@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>REGISTRO DE ALUMNOS</title>
+    <title>Hoja de Trabajo 5</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -13,7 +13,7 @@
 <body>
 
 <?php
-$regex = "/([a-zA-Z]{2,30}\s*)+$/";
+$regex = "/^[^\s|\W](?=[\S\s]{1,29}$)[a-zA-Z]+\s[a-zA-Z]+$/";
 $regexemail = "/^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/";
 
 if (isset($_POST['btnEnviar'])) {
@@ -31,7 +31,7 @@ if (isset($_POST['btnEnviar'])) {
 
 <div class="container md" id="contenedor">
     <form method="POST" class="p-4">
-        <center><h4>Formulario de Registro</h4><br></center>
+        <div style="text-align: center;"><h4>Formulario de Registro</h4><br></div>
         <label><b>Nombre</b> <i>(requerido)</i></label><br>
         <input type="text" name="nombre" autofocus/><br><br>
 
@@ -40,7 +40,7 @@ if (isset($_POST['btnEnviar'])) {
 
         <label><b>Email</b>  <i>(requerido)</i></label><br>
         <input type="text" name="email" autofocus/><br><br>
-        <center><input type="submit" value="Suscribirse" id="btnSuscribirse" name="btnEnviar" autofocus/></center><br><br>
+        <div style="text-align: center;"><input type="submit" value="Suscribirse" id="btnSuscribirse" name="btnEnviar" autofocus/></div><br><br>
 
         <?php if(isset($resultado)) {echo '&nbsp;'.$resultado.'';} ?>
 
